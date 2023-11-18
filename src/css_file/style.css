@@ -1,0 +1,111 @@
+* {
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:linear-gradient(rgb(7, 11, 52), rgb(20, 24, 82),rgb(43, 47, 119), rgb(72, 52, 117));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    
+    z-index: 10;
+    background: black;
+    position:absolute;
+}
+
+
+.editable {
+    background: white;
+    z-index: 11;
+    border: 1px solid #ddd;
+    padding: 5px;
+    min-height: 20px;
+    position:absolute;
+    left: calc(50% - 400px); 
+    top: calc(50% + 210px);  
+}
+
+.editable:focus {
+    outline: none;
+    border-color: #aaa;
+}
+.balloon {
+    z-index: 15;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #888;
+    position: absolute; 
+    left: calc(50% + 100px);
+    top: calc(50% - 270px);
+    color: black;
+}
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    bottom: -20px;
+    left: 20px; 
+}
+
+
+.thought-bubble {
+    z-index: 15;
+    position: absolute;
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    border: 2px solid #666;
+    text-align: center;
+
+}
+
+.thought-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #666;
+    border-radius: 50%;
+}
+
+.thought-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 70px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #666;
+    border-radius: 50%;
+}
+
+.song-text {
+    
+    position: absolute;
+    left: calc(50% - 400px);
+    top: calc(50% + 320px);
+    color: white;
+    
+}
