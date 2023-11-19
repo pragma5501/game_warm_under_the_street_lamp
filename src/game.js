@@ -11,9 +11,11 @@ export class GameManager{
     
     play(ctx, player) {
         if (this.flag_play == false) {
-            this.show_gameover(ctx);    
+            this.show_gameover(ctx); 
+            return;   
         }
         this.enemy.draw(ctx);
+
         
         if (this.collision_handler.light_enemy(player, this.enemy)) {
             this.enemy.turn_off_flag_update();
